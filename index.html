@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Gaming Demo</title>
 
 <style>
@@ -15,11 +16,12 @@
 
 body{
   background:#0f1020;
-  color:white;
+  color:#fff;
 }
 
 .container{
   display:flex;
+  flex-direction:row-reverse; /* Website Right | Content Left */
   min-height:100vh;
 }
 
@@ -151,9 +153,11 @@ h1{
   line-height:1.5;
 }
 
+/* Mobile */
 @media(max-width:768px){
+
   .container{
-    flex-direction:column;
+    flex-direction:column-reverse; /* Content Top | Website Bottom */
   }
 
   .demo,
@@ -168,9 +172,11 @@ h1{
   .right{
     padding:20px;
   }
+
 }
 
 @media(max-width:480px){
+
   h1{
     font-size:28px;
   }
@@ -193,79 +199,88 @@ h1{
     flex-direction:column;
     gap:8px;
   }
+
 }
 </style>
-</head>
 
+</head>
 <body>
 
 <div class="container">
 
-  <div class="demo">
-    <iframe src="https://chaibet.me/"></iframe>
-  </div>
+    <!-- Website (Right on Desktop, Bottom on Mobile) -->
+    <div class="demo">
+        <iframe src="https://chaibet.me/"></iframe>
+    </div>
 
-  <div class="right">
-    <div class="box">
+    <!-- Content (Left on Desktop, Top on Mobile) -->
+    <div class="right">
 
-      <div class="badge">VIP Manual ID Available</div>
+        <div class="box">
 
-      <h1>Get Your ID Now</h1>
+            <div class="badge">VIP Manual ID Available</div>
 
-      <p class="sub">
-        Fast manual ID service with easy deposit support.
-        New users can start quickly through WhatsApp.
-      </p>
+            <h1>Get Your ID Now</h1>
 
-      <div class="features">
-        <div class="feature">
-          Minimum Deposit: <span>₹100 Only</span>
+            <p class="sub">
+                Fast manual ID service with easy deposit support.
+                New users can start quickly through WhatsApp.
+            </p>
+
+            <div class="features">
+
+                <div class="feature">
+                    Minimum Deposit: <span>₹100 Only</span>
+                </div>
+
+                <div class="feature">
+                    Welcome Bonus: <span>2%</span>
+                </div>
+
+                <div class="feature">
+                    Manual ID Support: <span>WhatsApp Only</span>
+                </div>
+
+                <div class="feature">
+                    Quick Help:
+                    <span>Deposit &amp; Withdrawal Support</span>
+                </div>
+
+            </div>
+
+            <div class="website-row">
+
+                <a class="website" href="https://www.chaibet.me" target="_blank">
+                    🌐 www.chaibet.me
+                </a>
+
+                <a class="whatsapp-small" href="https://wa.me/+447492093354" target="_blank">
+                    💬 WhatsApp
+                </a>
+
+            </div>
+
+            <a class="cta"
+               href="https://wa.me/+447492093354?text=Hello%20I%20want%20new%20manual%20ID"
+               target="_blank">
+                📲 WhatsApp Now
+            </a>
+
+            <p class="trust">
+                ✅ Trusted Manual Support<br>
+                ✅ Simple Process<br>
+                ✅ Fast Response
+            </p>
+
+            <div class="footer">
+                18+ Only | Play Responsibly | Follow Your Local Laws | T&amp;C Apply
+            </div>
+
         </div>
-
-        <div class="feature">
-          Welcome Bonus: <span>2%</span>
-        </div>
-
-        <div class="feature">
-          Manual ID Support: <span>WhatsApp Only</span>
-        </div>
-
-        <div class="feature">
-          Quick Help: <span>Deposit &amp; Withdrawal Support</span>
-        </div>
-      </div>
-
-      <div class="website-row">
-        <a class="website" href="https://www.chaibet.me" target="_blank">
-          🌐 www.chaibet.me
-        </a>
-
-        <a class="whatsapp-small" href="https://wa.me/+447492093354" target="_blank">
-          💬 WhatsApp
-        </a>
-      </div>
-
-      <a class="cta"
-         href="https://wa.me/+447492093354?text=Hello%20I%20want%20new%20manual%20ID"
-         target="_blank">
-        📲 WhatsApp Now
-      </a>
-
-      <p class="trust">
-        ✅ Trusted Manual Support<br>
-        ✅ Simple Process<br>
-        ✅ Fast Response
-      </p>
-
-      <div class="footer">
-        18+ Only | Play Responsibly | Follow Your Local Laws | T&amp;C Apply
-      </div>
 
     </div>
-  </div>
 
 </div>
 
 </body>
 </html>
-```
